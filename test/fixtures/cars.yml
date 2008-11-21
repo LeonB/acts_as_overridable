@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+ fiesta:
+   brand: Ford
+   modeltype: Fiesta
+   number_of_wheels: 4
+   steering_wheel: false
+   color: silver
+   coachwork: coupe
+
+ cubistar:
+   brand: Nissan
+   modeltype: Cubistar
+   number_of_wheels: 3
+   steering_wheel: true
+   color: white
+   coachwork: van
+
+ mini:
+   brand: Mini
+   modeltype: Cooper
+   number_of_wheels: 4
+   steering_wheel: true
+   color: black
+   coachwork: Hatchback
+
+ bmw:
+   brand: BMW
+   modeltype: 3 serie
+   number_of_wheels: 4
+   steering_wheel: true
+   color: black
+   coachwork: Station Wagon
