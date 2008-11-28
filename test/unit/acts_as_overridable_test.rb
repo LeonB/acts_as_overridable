@@ -52,6 +52,17 @@ class ActsAsOverridableTest < ActiveSupport::TestCase
   end
 
   def test_save_should_not_be_alias_of_save_with_overridable_attributes
+    mini = Car.find_by_modeltype('Cooper')
+    mini.brand = 'BMW'
+    mini.save
+    assert mini.original_values.length == 0
+  end
 
+  def test_save_should_be_alias_of_save_without_overridable_attributes
+    bmw = Car.find_by_modeltype('3 serie')
+    bmw.brand = 'BMotorWerken'
+    bmw.save_without_overridable_attributes
+    assert bmw.brand == 'BMotorWerken'
+    assert bmw.original_values.length == 0
   end
 end
